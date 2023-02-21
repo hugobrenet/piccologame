@@ -26,7 +26,6 @@ def game():
     nameofplayer = player()
     random.shuffle(nameofplayer)
     questionforplayer = question()
-    random.shuffle(questionforplayer)
 
     dict = {}
     for name in nameofplayer:
@@ -34,5 +33,8 @@ def game():
             dict[name] = request
             questionforplayer.remove(request)
             break
-    print(dict)
+    return dict
+
+    
+
 

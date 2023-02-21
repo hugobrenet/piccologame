@@ -1,8 +1,13 @@
 from game import (
     game,
 )
+from frame import (
+    frame,
+)
 
 def main():
-    game()
+    r = game()
+    return r
 
-main()
+# main()
+frame(main())
