@@ -9,5 +9,7 @@ def main():
     r = game()
     return r
 
+
 # main()
 frame(main())
+# afficher_dictionnaire(main())

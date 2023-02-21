@@ -33,7 +33,10 @@ def game():
             dict[name] = request
             questionforplayer.remove(request)
             break
+  
     return dict
+
+    
 
     
 
