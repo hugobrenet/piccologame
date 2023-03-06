@@ -1,5 +1,6 @@
 from tkinter import *
 
+    
 def iterator_next(dictionnaire):
     cles = list(dictionnaire.keys())
     index_cle_actuelle = 0
@@ -20,7 +21,8 @@ def iterator_next(dictionnaire):
 def iterator_back(dict):
     pass
 
-def frame(dict):
+
+def framegame(dict):
     global frame,label
     frame = Tk()
     frame.geometry("800x400")
