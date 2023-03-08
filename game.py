@@ -21,9 +21,9 @@ def question():
     return question
 
 
-def game():
+def game(player):
     import random
-    nameofplayer = player()
+    nameofplayer = player
     random.shuffle(nameofplayer)
     questionforplayer = question()
 
