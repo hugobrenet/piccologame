@@ -5,7 +5,8 @@ from frame import (
     framegame,
 )
 from tkinter import *
-
+list_entry = []
+list_of_name = []
 class App(Tk):
     def __init__(self):
         super().__init__()
@@ -14,10 +15,14 @@ class App(Tk):
 
         self.how_many_player = Label(self, text="Combien de joueur ?",width=30)  
         self.how_many_player.pack()
+        self.how_many_player_entry = Entry(self, width=30)
+        self.how_many_player_entry.pack()
 
-        for i in range(8):
-            self.entree = Entry(self, width=30)
-            self.entree.pack(pady=3)
+        self.button = Button(self, text="Ajouter", command=self.ajouterchamp)
+        self.button.pack(pady=20)
+        # for i in range(8):
+        #     self.entree = Entry(self, width=30)
+        #     self.entree.pack(pady=3)
 
         # self.button = Button(self, text="Ouvrir la seconde frame", command=self.create_second_frame)
         # self.button.pack(pady=20)
@@ -30,13 +35,20 @@ class App(Tk):
     def create_second_frame(self):
         second_window = framegame(main())
         second_window.show()
+
+    def ajouterchamp(self):
+        recup = int(self.how_many_player_entry.get())
+        for i in range(recup):
+            var = Entry(self)
+            list_entry.append(var)
+            var.pack()
+
         
     def addname(self):
-        self.a = []
-        item = self.entree.get()
-        if item:
-            self.a.append(item)
-        print(self.a)
+        for i in list_entry:
+            recup = (i.get())
+            list_of_name.append(recup)
+        print(list_of_name)
         
 def main():
     r = game()
