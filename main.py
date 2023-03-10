@@ -27,14 +27,8 @@ class App(Tk):
         # self.button = Button(self, text="Ouvrir la seconde frame", command=self.create_second_frame)
         # self.button.pack(pady=20)
 
-        self.button = Button(self, text="Ouvrir la seconde frame", command=self.addname)
+        self.button = Button(self, text="Jouer", command=self.addname)
         self.button.pack(pady=20)
-
-        
-
-    def create_second_frame(self):
-        second_window = framegame(main())
-        second_window.show()
 
     def ajouterchamp(self):
         recup = int(self.how_many_player_entry.get())
@@ -49,6 +43,9 @@ class App(Tk):
             recup = (i.get())
             list_of_name.append(recup)
         print(list_of_name)
+        second_window = framegame(game(list_of_name))
+        second_window.show()
+
         
 def main():
     r = game()
