@@ -1,10 +1,9 @@
 from game import (
     game,
 )
-from frame import (
-    framegame,
-)
+import frame 
 from tkinter import *
+module = frame.frame()
 list_entry = []
 list_of_name = []
 class App(Tk):
@@ -42,8 +41,7 @@ class App(Tk):
         for i in list_entry:
             recup = (i.get())
             list_of_name.append(recup)
-        print(list_of_name)
-        second_window = framegame(game(list_of_name))
+        second_window = module.framegame(game(list_of_name))
         second_window.show()
 
         
